@@ -144,7 +144,7 @@ export default function Day({navigation}){
           <View style={{flex:1}}>
             <StatusBar barStyle='light-content'/>
           <ImageBackground source={bgimg}
-        style={{width:windowWidth,height:windowHeight,alignItems:'center'}}>
+        style={{width:'100%',height:'100%',alignItems:'center'}}>
           <ScrollView
           showsVerticalScrollIndicator={false}>
           <View style={{justifyContent:'center',alignItems:'center',marginBottom:50,marginTop:'60%',padding:10}}>

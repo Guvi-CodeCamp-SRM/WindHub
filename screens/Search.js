@@ -1,5 +1,5 @@
 import React,{useState,useEffect} from 'react';
-import { StyleSheet, View,TextInput,FlatList,Text,TouchableOpacity, Alert,Button,Platform,StatusBar,PermissionsAndroid,AppState } from 'react-native';
+import { StyleSheet, View,TextInput,FlatList,Text,TouchableOpacity, Alert,Button,Platform,StatusBar,PermissionsAndroid,AppState,ImageBackground,useWindowDimensions } from 'react-native';
 import { Card } from 'react-native-paper';
 import axios from 'axios';
 import Constants from 'expo-constants';
@@ -13,7 +13,8 @@ export default function Search({navigation}){
 
     const [location, setLocation] = useState(null);
     const [errorMsg, setErrorMsg] = useState(null);
-    const days=['Sun','Mon','Tues','Wed','Thus','Fri','Sat','Sun','Mon','Tues','Wed','Thus','Fri','Sat']
+    const days=['Sun','Mon','Tues','Wed','Thus','Fri','Sat','Sun','Mon','Tues','Wed','Thus','Fri','Sat'];
+    var bg;
 
 
     handleAppStateChange = nextAppState => {
@@ -192,7 +193,7 @@ export default function Search({navigation}){
             sunrisets = sunrisets-(5.5*60*60);
             var sunsetts=parseInt(info.data.data[0].sunset_ts)-parseInt(info.data.data[0].ts);
             const ts =new Date(parseInt(info.data.data[0].sunrise_ts)*1000);
-            console.log(ts); 
+
             sunsetts = sunsetts-(5.5*60*60);
             const dateobj1 = new Date(sunrisets*1000);
             const dateobj2 = new Date(sunsetts*1000);
@@ -258,12 +259,26 @@ export default function Search({navigation}){
     })
 }
 
+const {width:windowWidth, height:windowHeight} = useWindowDimensions();
+
+var hours = new Date().getHours();
+if(hours<=5 || hours>=19){
+  bg=require('../assets/nighttime.png');
+}
+else{
+  bg=require('../assets/daytime.png');
+}
 
     
     return(
-      <View style={{backgroundColor:'white',flex:1}}>
+      <View style={{flex:1}}>
+                        <ImageBackground source={bg}
+        style={{width:windowWidth,height:windowHeight}}>
+
                     <View style={{marginTop:'8%',alignItems:'center'}}>
-                <StatusBar barStyle='light-content'/>
+  
+                
+
             <TextInput
                 style={styles.input}
                 placeholder='Enter Location'
@@ -276,7 +291,7 @@ export default function Search({navigation}){
                 return(
                     <TouchableOpacity onPress={() => pressHandler(item)}>
                     <Card 
-                    style={{margin:2,padding:12,justifyContent:'center',alignItems: 'center',width:300,borderWidth:1,borderColor:'black'}}>
+                    style={{margin:2,padding:12,justifyContent:'center',alignItems: 'center',width:300,borderWidth:2,borderColor:'green'}}>
                         
                             <Text>{item}</Text>
                         
@@ -295,12 +310,14 @@ export default function Search({navigation}){
             </View>
 
         </TouchableOpacity>
+        
             
         
             
                 
             
         </View>
+        </ImageBackground>
 
       </View>
 
@@ -313,8 +330,8 @@ export default function Search({navigation}){
 const styles = StyleSheet.create({
 
     input:{
-        marginTop: '10%',
-        marginBottom:'5%',
+        marginTop: '50%',
+        marginBottom:'2%',
         alignItems: 'flex-end',
         justifyContent: 'space-between',
         padding:10,
