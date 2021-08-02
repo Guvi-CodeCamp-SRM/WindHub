@@ -13,4 +13,10 @@ App Screens
 | ------------- | -----:|
 | <img src ="screen3.jpg" height = "620" width = "300">      | <img src ="screen4.jpg" height = "620" width = "300"> |
 
+## Goals and Features
+It allows users to see conditions, forecast, temperature, and other related metrics of the device's <br />
+current location,as well as a number of the other cities.
 
+## Credits
+api.weatherbit.io <br />
+api.weather.com
