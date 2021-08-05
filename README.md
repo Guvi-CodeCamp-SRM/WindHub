@@ -20,3 +20,37 @@ current location,as well as a number of the other cities.
 ## Credits
 api.weatherbit.io <br />
 api.weather.com
+
+## Contributors 🤝
+
+<table>
+  <tr>
+    <td align="center">
+            <a href="https://github.com/smgrv123">
+              <img src="https://avatars.githubusercontent.com/u/55049859?v=4" width="100px" alt=""/><br />
+              <sub><b>Sumrit Grover</b></sub>
+            </a><br/>
+            <a href="https://github.com/smgrv123">   
+                🔥 🧠 ⛱
+            </a>
+          </td>
+    <td align="center">
+            <a href="https://github.com/pratyx">
+              <img src="https://avatars.githubusercontent.com/u/85306319?v=4" width="100px" alt=""/><br />
+              <sub><b>Pratyusha Mandal</b></sub>
+            </a><br/>
+            <a >
+                📖
+            </a>
+          </td>
+    <td align="center">
+            <a href='https://github.com/hardik-kh'>
+              <img src="https://avatars.githubusercontent.com/u/82742120?v=4" width="100px" alt=""/><br />
+              <sub><b>Hardik Khandelwal</b></sub>
+            </a><br/>
+            <a >
+                💻
+            </a>
+          </td>
+  </tr>
+</table>
