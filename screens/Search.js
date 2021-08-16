@@ -272,6 +272,7 @@ else{
     
     return(
       <View style={{flex:1}}>
+        <StatusBar barStyle='light-content'/>
                         <ImageBackground source={bg}
         style={{width:windowWidth,height:windowHeight}}>
 
@@ -284,6 +285,14 @@ else{
                 placeholder='Enter Location'
                 value={city}
                 onChangeText={(val)=> fetchCities(val)} />
+
+<TouchableOpacity onPress={() => clickHandler()}>
+        <View style={styles.button}>
+          <Text style={styles.text}>Use my Location</Text>
+
+            </View>
+
+        </TouchableOpacity>
             
             <FlatList
             data={cities}
@@ -303,13 +312,7 @@ else{
             }}
             keyExtractor={item=>item}
         />
-        <TouchableOpacity onPress={() => clickHandler()}>
-        <View style={styles.button}>
-          <Text style={styles.text}>Use my Location</Text>
 
-            </View>
-
-        </TouchableOpacity>
         
             
         
@@ -335,8 +338,8 @@ const styles = StyleSheet.create({
         alignItems: 'flex-end',
         justifyContent: 'space-between',
         padding:10,
-        borderWidth:1,
-        borderColor:'#777',
+        borderWidth:2,
+        borderColor:'black',
         width:300,
         color:'black',
         backgroundColor:'white',
@@ -344,7 +347,7 @@ const styles = StyleSheet.create({
     },
     button:{
         marginTop:'5%',
-        marginBottom:'20%',
+        marginBottom:'5%',
         borderRadius:8,
         backgroundColor:'deepskyblue',
         paddingVertical:12,
