@@ -54,3 +54,9 @@ api.weather.com
           </td>
   </tr>
 </table>
+
+## Download apk
+You can run this app on your android phone by downloading from below
+<a href='https://drive.google.com/drive/folders/1SN1VXVqQeDce6yTjGyqdmpxIYocWT-I0'>
+  CLICK HERE
+  </a>
