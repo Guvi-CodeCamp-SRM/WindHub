@@ -1,5 +1,5 @@
 # WindHub
-### Weatherapp is a simple weather forecast app, which uses some APIs to fetch 7 day forecast data <br/>
+### WindHub is a simple weather forecast app, which uses some APIs to fetch 7 day forecast data <br/>
 ### using React Native for both Android and IOS
 
 
